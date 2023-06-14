@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+    <style>
+        body{
+            font: normal 15pt arial;
+        }
+        input{
+            font: normal 13pt arial;
+            width: 150px;
+        }
+        input#bt {
+            width: 80px;
+            background-color: rgb(199, 183, 183);
+            margin-left: 10px;
+        }
+        div#res {
+            margin-top: 20px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" id="bt" value="somar" onclick="somar()">
+     <div id="res"> </div>
+    <script> 
+        function somar() {
+            var tn1 = window.document.querySelector('input#txtn1') //input se escreve com "N" de navio
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number.parseFloat(tn2.value) // para pode pegar o valo da variavel tem que colocar o nome + ".value"
+            var r = n1 + n2
+            //window.document.write(`A soma entre ${n1} + ${n2} é igual a ${r}`)
+            res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong>${r}</strong>`
+        }
+    </script>
+</body>
+</html>
